@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1282</width>
+    <height>663</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="bgwidget">
+   <property name="geometry">
+    <rect>
+     <x>-40</x>
+     <y>0</y>
+     <width>1331</width>
+     <height>821</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget #bgwidget{
+background:qlineargradient(spread:pad, x1:0.0298507, y1:0.051, x2:1, y2:0.971364, stop:0 rgba(33, 0, 116, 255), stop:1 rgba(121, 121, 121, 255))
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QFrame" name="w2">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>-50</y>
+      <width>191</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#w2{
+border-radius:50px;
+background:rgba(170, 170, 255,0.4);
+rotate: 30deg;
+}
+
+QWidget#w2:hover{
+border-radius:50px;
+background:rgba(170, 170, 255,0.8);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="w3">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>-60</y>
+      <width>171</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#w3{
+border-radius:50px;
+background:rgba(175, 197, 255,0.4)
+}
+QWidget#w3:hover{
+border-radius:50px;
+background:rgba(175, 197, 255,0.7)
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="music">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>380</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#music{
+background-color:rgba(255, 41, 187,0.5);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+
+}
+QWidget#music:hover{
+background-color:rgba(255, 41, 187,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+  transform: translate(0, -10px);
+}
+QWidget#music:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>MUSIC</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="w4">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>60</y>
+      <width>171</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#w4{
+border-radius:50px;
+background:rgba(200, 170, 255,0.2);
+}
+QWidget#w4:hover{
+border-radius:50px;
+background:rgba(200, 170, 255,0.7);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="phone">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>380</y>
+      <width>161</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#phone{
+background-color:rgba(170, 170, 255,0.4);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#phone:hover{
+background-color:rgba(170, 170, 255,0.7);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#phone:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>PHONE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gps">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>380</y>
+      <width>161</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#gps{
+background-color:rgba(255, 186, 172,0.5);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#gps:hover{
+background-color:rgba(255, 186, 172,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#gps:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>GPS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="blue">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>380</y>
+      <width>161</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#register_2{
+background-color:rgba(255, 41, 187,0.5);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:hover{
+background-color:rgba(255, 41, 187,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>BLUETOOTH</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gps_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>110</y>
+      <width>181</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#register_2{
+background-color:rgba(255, 41, 187,0.5);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:hover{
+background-color:rgba(255, 41, 187,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>MYDRIVE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gps_3">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>110</y>
+      <width>161</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#register_2{
+background-color:rgba(255, 41, 187,0.5);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:hover{
+background-color:rgba(255, 41, 187,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>CLUSTER</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gps_4">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>110</y>
+      <width>161</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#register_2{
+background-color:rgba(255, 41, 187,0.5);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:hover{
+background-color:rgba(255, 41, 187,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>DATE TIME</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gps_5">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>110</y>
+      <width>161</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#register_2{
+background-color:rgba(255, 41, 187,0.5);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:hover{
+background-color:rgba(255, 41, 187,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>GOOGLE</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

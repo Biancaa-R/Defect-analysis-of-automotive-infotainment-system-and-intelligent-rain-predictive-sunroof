@@ -1,4 +1,4 @@
-#Developed By Sihab Sahariar
+
 import sys
 import io
 import folium # pip install folium
@@ -23,19 +23,27 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setFixedSize(1117, 636)
-        MainWindow.setStyleSheet("background-color: rgb(30, 31, 40);")
+        #MainWindow.setStyleSheet("background-color: rgb(30, 31, 40);")
+        MainWindow.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.9801, y2:0.92, stop:0 rgba(151, 151, 226, 255), stop:1 rgba(6, 15, 102, 255));")
         #dark shade of blue-gray with RGB values of (30, 31, 40). 
         self.car_scheme = QtWidgets.QWidget(MainWindow)
         #creates a centralwidget 
         self.car_scheme.setObjectName("car_scheme")
         self.label = QtWidgets.QLabel(self.car_scheme)
         self.label.setGeometry(QtCore.QRect(0, 0, 1111, 651))
+        """x-coordinate: 0
+        y-coordinate: 0
+        width: 1111
+        height: 651"""
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap(":/bg/Untitled (1).png"))
         #self.label.setPixmap(QtGui.QPixmap(":bg.jpeg"))
         self.label.setScaledContents(True)
+        #method in PyQt is used to enable or disable automatic scaling of the pixmap displayed by a QLabel to fit its size.
         self.label.setObjectName("label")
         self.frame = QtWidgets.QFrame(self.car_scheme)
+        #That background object for colour
+        #QFrame is a widget that can be used as a container for other widgets or as a decorative element with a frame, line, or shadow. It can contain other widgets and manage their layout.
         self.frame.setGeometry(QtCore.QRect(306, 60, 521, 61))
         self.frame.setStyleSheet("QFrame{\n"
 "background:None;\n"
@@ -64,6 +72,7 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        #This line of code sets the shape of self.frame to a styled panel, which typically gives it a border with a sunken or raised appearance, depending on the platform's widget style
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame)
@@ -167,6 +176,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.label_11)
         self.label_12 = QtWidgets.QLabel(self.frame_2)
         self.label_12.setMaximumSize(QtCore.QSize(40, 35))
+        #Here, QtCore.QSize(40, 35) specifies the maximum width of 40 pixels and the maximum height of 35 pixels for the label
         self.label_12.setText("")
         self.label_12.setPixmap(QtGui.QPixmap(":/icon/1442194.png"))
         self.label_12.setScaledContents(True)

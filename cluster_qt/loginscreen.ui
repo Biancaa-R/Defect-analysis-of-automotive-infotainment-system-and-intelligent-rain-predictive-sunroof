@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1256</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="bgwidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-10</y>
+     <width>1291</width>
+     <height>821</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget #bgwidget{
+background:qlineargradient(spread:pad, x1:0.0298507, y1:0.051, x2:1, y2:0.971364, stop:0 rgba(33, 0, 116, 255), stop:1 rgba(121, 121, 121, 255))
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="welcome">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>100</y>
+      <width>211</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Login</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="welcome_2">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>160</y>
+      <width>341</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Login to your existing account</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="w1">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>-20</y>
+      <width>221</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#w1{
+border-radius:50px;
+background:rgba(255, 170, 255,0.2);
+}
+QWidget#w1:hover{
+border-radius:50px;
+background:rgba(255, 170, 255,0.7);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="w2">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>150</y>
+      <width>221</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#w2{
+border-radius:50px;
+background:rgba(170, 170, 255,0.4);
+}
+
+QWidget#w2:hover{
+border-radius:50px;
+background:rgba(170, 170, 255,0.8);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="w3">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>60</y>
+      <width>221</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#w3{
+border-radius:50px;
+background:rgba(175, 197, 255,0.4)
+}
+QWidget#w3:hover{
+border-radius:50px;
+background:rgba(175, 197, 255,0.7)
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="login">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>410</y>
+      <width>301</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#login{
+background-color:rgba(255, 41, 187,0.5);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#login:hover{
+background-color:rgba(255, 41, 187,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#login:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>login</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="w4">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>310</y>
+      <width>181</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#w4{
+border-radius:50px;
+background:rgba(200, 170, 255,0.2);
+}
+QWidget#w4:hover{
+border-radius:50px;
+background:rgba(200, 170, 255,0.7);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="email">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>260</y>
+      <width>431</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(255, 255, 255,0);
+color:rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="password">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>330</y>
+      <width>431</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(255, 255, 255,0);
+color:rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="error">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>490</y>
+      <width>421</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 135, 135);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="register_2">
+    <property name="geometry">
+     <rect>
+      <x>1110</x>
+      <y>580</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#register_2{
+background-color:rgba(255, 41, 187,0.5);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:hover{
+background-color:rgba(255, 41, 187,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#register_2:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>register</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="welcome_7">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>520</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#welcome_7{
+background-color:rgba(255, 41, 187,0.5);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#welcome_7:hover{
+background-color:rgba(255, 41, 187,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#welcome_7:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
