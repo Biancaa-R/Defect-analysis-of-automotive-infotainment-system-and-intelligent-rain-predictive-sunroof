@@ -4,9 +4,10 @@ from PyQt5.QtWidgets import QDialog,QApplication,QSplashScreen,QWidget
 from PyQt5.QtWidgets import QStackedWidget
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPixmap,QIcon
+from PyQt5.QtGui import QPixmap,QIcon,QMovie
 from PyQt5.QtWidgets import QMessageBox
 import time
+import webbrowser
 
 
 import warnings
@@ -72,7 +73,14 @@ class WelcomeScreen(QDialog):
         # msg.setText("Do you want to goto cluster or infotainment?")
         # msg.setIcon(QMessageBox.Question)
         # msg.exec()
-        pass
+        #pass
+
+        # music=MusicScreen()
+        # widget.addWidget(music)
+        # widget.setCurrentWidget(music)
+        menu=MenuScreen()
+        widget.addWidget(menu)
+        widget.setCurrentWidget(menu)
              
 class LoginScreen(QDialog):
     def __init__(self):
@@ -139,6 +147,95 @@ class SignupScreen(QDialog):
         confirm=self.confirm.text()
         if (password!=confirm):
             self.error.setText("Passwords do not match")
+
+class MusicScreen(QDialog):
+    def __init__(self):
+        super(QDialog,self).__init__()
+        loadUi("gif_render.ui",self)
+        movie=QMovie("assets//music_bg.gif")
+        self.bg_label.setMovie(movie)
+        movie.start()
+
+class MenuScreen(QDialog):
+    def __init__(self):
+        super(QDialog,self).__init__()
+        loadUi("menu.ui",self)
+        self.google.clicked.connect(self.gotogoogle)
+
+    def gotogoogle(self):
+        google=GoogleScreen()
+        widget.addWidget(google)
+        widget.setCurrentWidget(google)
+
+class GoogleScreen(QDialog):
+    def __init__(self):
+        super(QDialog,self).__init__()
+        loadUi("google.ui",self)
+        self.google.clicked.connect(self.gotogoogle)
+        self.youtube.clicked.connect(self.gotoyoutube)
+        self.maps.clicked.connect(self.gotomaps)
+        self.drive.clicked.connect(self.gotodrive)
+        self.sheets.clicked.connect(self.gotosheets)
+        self.voice.clicked.connect(self.gotovoice)
+        self.meet.clicked.connect(self.gotomeet)
+        self.docs.clicked.connect(self.gotodocs)
+
+    def gotogoogle(self):
+        # then make a url variable 
+        url = "https://www.google.com"
+
+        # then call the default open method described above 
+        webbrowser.open(url)
+
+    def gotoyoutube(self):
+        # then make a url variable 
+        url = "https://www.youtube.com/"
+
+        # then call the default open method described above 
+        webbrowser.open(url) 
+
+    def gotomaps(self):
+        # then make a url variable 
+        url = "https://maps.google.com/"
+
+        # then call the default open method described above 
+        webbrowser.open(url)       
+
+    def gotodrive(self):
+        # then make a url variable 
+        url = "https://drive.google.com/"
+
+        # then call the default open method described above 
+        webbrowser.open(url)   
+
+    def gotosheets(self):
+        # then make a url variable 
+        url = "https://docs.google.com/spreadsheets/"
+
+        # then call the default open method described above 
+        webbrowser.open(url)   
+
+
+    def gotovoice(self):
+        # then make a url variable 
+        url = "https://assistant.google.com/"
+
+        # then call the default open method described above 
+        webbrowser.open(url)   
+
+    def gotomeet(self):
+        # then make a url variable 
+        url = "https://meet.google.com/"
+
+        # then call the default open method described above 
+        webbrowser.open(url)   
+
+    def gotodocs(self):
+        # then make a url variable 
+        url = "https://docs.google.com/document/"
+
+        # then call the default open method described above 
+        webbrowser.open(url)   
 
 
 

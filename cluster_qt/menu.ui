@@ -346,7 +346,7 @@ border-radius:20px;
      <string>DATE TIME</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="gps_5">
+   <widget class="QPushButton" name="google">
     <property name="geometry">
      <rect>
       <x>940</x>
