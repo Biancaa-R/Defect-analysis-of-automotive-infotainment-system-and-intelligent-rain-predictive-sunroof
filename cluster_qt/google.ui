@@ -580,6 +580,39 @@ border-radius:20px;
      <string>docs</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="menu">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>600</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#menu{
+background-color:rgba(255, 255, 0,0.4);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#menu:hover{
+background-color:rgba(255, 255, 0,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}
+QWidget#menu:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>

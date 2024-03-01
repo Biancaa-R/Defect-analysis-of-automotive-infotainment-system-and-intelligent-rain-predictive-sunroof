@@ -220,23 +220,23 @@ border-radius:20px;
       <x>940</x>
       <y>380</y>
       <width>161</width>
-      <height>231</height>
+      <height>241</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QWidget#register_2{
-background-color:rgba(255, 41, 187,0.5);
+     <string notr="true">QWidget#blue{
+background-color:rgba(0, 255, 255,0.3);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }
-QWidget#register_2:hover{
-background-color:rgba(255, 41, 187,0.9);
+QWidget#blue:hover{
+background-color:rgba(0, 255, 255,0.7);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }
-QWidget#register_2:pressed{
+QWidget#blue:pressed{
 background-color:rgba(255, 255, 255,0.8);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -247,7 +247,7 @@ border-radius:20px;
      <string>BLUETOOTH</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="gps_2">
+   <widget class="QPushButton" name="mydrive">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -257,19 +257,19 @@ border-radius:20px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QWidget#register_2{
-background-color:rgba(255, 41, 187,0.5);
+     <string notr="true">QWidget#mydrive{
+background-color:rgba(170, 255, 0,0.5);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }
-QWidget#register_2:hover{
-background-color:rgba(255, 41, 187,0.9);
+QWidget#mydrive:hover{
+background-color:rgba(170, 255, 0,0.8);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }
-QWidget#register_2:pressed{
+QWidget#mydrive:pressed{
 background-color:rgba(255, 255, 255,0.8);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -280,7 +280,7 @@ border-radius:20px;
      <string>MYDRIVE</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="gps_3">
+   <widget class="QPushButton" name="cluster">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -290,19 +290,19 @@ border-radius:20px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QWidget#register_2{
-background-color:rgba(255, 41, 187,0.5);
+     <string notr="true">QWidget#cluster{
+background-color:rgba(0, 170, 255,0.3);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }
-QWidget#register_2:hover{
-background-color:rgba(255, 41, 187,0.9);
+QWidget#cluster:hover{
+background-color:rgba(0, 170, 255,0.9);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }
-QWidget#register_2:pressed{
+QWidget#cluster:pressed{
 background-color:rgba(255, 255, 255,0.8);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -313,7 +313,7 @@ border-radius:20px;
      <string>CLUSTER</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="gps_4">
+   <widget class="QPushButton" name="date">
     <property name="geometry">
      <rect>
       <x>760</x>
@@ -323,19 +323,19 @@ border-radius:20px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QWidget#register_2{
-background-color:rgba(255, 41, 187,0.5);
+     <string notr="true">QWidget#date{
+background-color:rgba(255, 47, 137,0.3);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }
-QWidget#register_2:hover{
-background-color:rgba(255, 41, 187,0.9);
+QWidget#date:hover{
+background-color:rgba(255, 47, 137,0.9);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }
-QWidget#register_2:pressed{
+QWidget#date:pressed{
 background-color:rgba(255, 255, 255,0.8);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -356,19 +356,19 @@ border-radius:20px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QWidget#register_2{
-background-color:rgba(255, 41, 187,0.5);
+     <string notr="true">QWidget#google{
+background-color:rgba(0, 170, 0,0.3);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }
-QWidget#register_2:hover{
-background-color:rgba(255, 41, 187,0.9);
+QWidget#google:hover{
+background-color:rgba(0, 170, 0,0.9);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }
-QWidget#register_2:pressed{
+QWidget#google:pressed{
 background-color:rgba(255, 255, 255,0.8);
 color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -377,6 +377,41 @@ border-radius:20px;
     </property>
     <property name="text">
      <string>GOOGLE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="wifi">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>380</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#wifi{
+background-color:rgba(170, 0, 255,0.4);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+
+}
+QWidget#wifi:hover{
+background-color:rgba(170, 0, 255,0.9);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+  transform: translate(0, -10px);
+}
+QWidget#wifi:pressed{
+background-color:rgba(255, 255, 255,0.8);
+color:rgb(255, 255, 255);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>WIFI</string>
     </property>
    </widget>
   </widget>

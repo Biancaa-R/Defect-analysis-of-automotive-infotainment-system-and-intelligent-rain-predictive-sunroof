@@ -234,6 +234,9 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
 color:rgb(255, 255, 255);
 font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
    <widget class="QLabel" name="error">
     <property name="geometry">
@@ -312,6 +315,19 @@ color:rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
 border-radius:20px;
 }</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bg_label">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>-340</y>
+      <width>31</width>
+      <height>351</height>
+     </rect>
     </property>
     <property name="text">
      <string/>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1568</width>
+    <height>670</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="bg_label">
+   <property name="geometry">
+    <rect>
+     <x>-26</x>
+     <y>-5</y>
+     <width>1601</width>
+     <height>691</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QDial" name="dial">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>380</y>
+     <width>181</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(208, 201, 255);</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="QSlide">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>460</y>
+     <width>1001</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid black;
+    height: 20px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(85, 170, 255, 255), stop:1 rgba(170, 170, 255, 255));
+}
+
+QSlider::handle:horizontal {
+    border: 1px solid black;
+    width: 50px;
+    border-radius: 5px;
+    background: qconicalgradient(cx:0.5, cy:0.477273, angle:0, stop:0 rgba(35, 40, 3, 255), stop:0.16 rgba(166, 171, 175, 255), stop:0.225 rgba(153, 153, 166, 255), stop:0.285 rgba(221, 226, 232, 255), stop:0.333333 rgba(255, 255, 255, 255), stop:0.39801 rgba(212, 203, 235, 255), stop:0.52 rgba(99, 89, 111, 255), stop:0.57 rgba(167, 156, 171, 255), stop:0.635 rgba(83, 84, 88, 255), stop:0.721393 rgba(202, 197, 202, 255), stop:0.75 rgba(179, 172, 191, 255), stop:0.815 rgba(222, 222, 222, 255), stop:0.88 rgba(174, 167, 184, 255), stop:0.915423 rgba(137, 137, 137, 255), stop:1 rgba(35, 40, 3, 255));
+}
+
+QSlider:add-page:horizontal{
+background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(229, 240, 255, 255), stop:1 rgba(172, 172, 172, 255));
+border:1px solid black;
+}</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="img">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>110</y>
+     <width>201</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
