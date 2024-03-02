@@ -1,0 +1,139 @@
+D:\Anaconda\Scripts>pip uninstall numpy
+Found existing installation: numpy 1.24.3
+Uninstalling numpy-1.24.3:
+  Would remove:
+    d:\anaconda\lib\site-packages\numpy-1.24.3.dist-info\*
+    d:\anaconda\lib\site-packages\numpy\*
+    d:\anaconda\scripts\f2py-script.py
+    d:\anaconda\scripts\f2py.exe
+Proceed (Y/n)? y
+  Successfully uninstalled numpy-1.24.3
+
+D:\Anaconda\Scripts>pip install  numpy
+Collecting numpy
+  Obtaining dependency information for numpy from https://files.pythonhosted.org/packages/3f/6b/5610004206cf7f8e7ad91c5a85a8c71b2f2f8051a0c0c4d5916b76d6cbb2/numpy-1.26.4-cp311-cp311-win_amd64.whl.metadata
+  Downloading numpy-1.26.4-cp311-cp311-win_amd64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 3.2 MB/s eta 0:00:00
+Using cached numpy-1.26.4-cp311-cp311-win_amd64.whl (15.8 MB)
+Installing collected packages: numpy
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+gensim 4.3.0 requires FuzzyTM>=0.4.0, which is not installed.
+tables 3.8.0 requires blosc2~=2.0.0, which is not installed.
+transformers 2.1.1 requires sentencepiece, which is not installed.
+numba 0.57.0 requires numpy<1.25,>=1.21, but you have numpy 1.26.4 which is incompatible.
+roboflow 1.1.19 requires certifi==2023.7.22, but you have certifi 2024.2.2 which is incompatible.
+Successfully installed numpy-1.26.4
+
+D:\Anaconda\Scripts>pip install  numpy==1.24.3
+Collecting numpy==1.24.3
+  Obtaining dependency information for numpy==1.24.3 from https://files.pythonhosted.org/packages/f0/e8/1ea9adebdccaadfc208c7517e09f5145ed5a73069779ff436393085d47a2/numpy-1.24.3-cp311-cp311-win_amd64.whl.metadata
+  Downloading numpy-1.24.3-cp311-cp311-win_amd64.whl.metadata (5.6 kB)
+Downloading numpy-1.24.3-cp311-cp311-win_amd64.whl (14.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.8/14.8 MB 7.4 MB/s eta 0:00:00
+Installing collected packages: numpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.26.4
+    Uninstalling numpy-1.26.4:
+      Successfully uninstalled numpy-1.26.4
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+gensim 4.3.0 requires FuzzyTM>=0.4.0, which is not installed.
+tables 3.8.0 requires blosc2~=2.0.0, which is not installed.
+transformers 2.1.1 requires sentencepiece, which is not installed.
+roboflow 1.1.19 requires certifi==2023.7.22, but you have certifi 2024.2.2 which is incompatible.
+Successfully installed numpy-1.24.3
+
+D:\Anaconda\Scripts>pip install FuzzyTM==0.4.0
+ERROR: Could not find a version that satisfies the requirement FuzzyTM==0.4.0 (from versions: 0.1.0, 0.2.0, 0.3.0, 1.0.0, 2.0.1, 2.0.2, 2.0.3, 2.0.4, 2.0.5)
+ERROR: No matching distribution found for FuzzyTM==0.4.0
+
+D:\Anaconda\Scripts>pip install FuzzyTM==1.0.0
+Collecting FuzzyTM==1.0.0
+  Obtaining dependency information for FuzzyTM==1.0.0 from https://files.pythonhosted.org/packages/c1/88/b005f28ee144a6f555c28d6ed24d7032ec8f22ff355316ecfda8236442e1/FuzzyTM-1.0.0-py3-none-any.whl.metadata
+  Downloading FuzzyTM-1.0.0-py3-none-any.whl.metadata (7.7 kB)
+Requirement already satisfied: numpy in d:\anaconda\lib\site-packages (from FuzzyTM==1.0.0) (1.24.3)
+Requirement already satisfied: pandas in d:\anaconda\lib\site-packages (from FuzzyTM==1.0.0) (2.2.1)
+Requirement already satisfied: scipy in d:\anaconda\lib\site-packages (from FuzzyTM==1.0.0) (1.10.1)
+Collecting pyfume (from FuzzyTM==1.0.0)
+  Obtaining dependency information for pyfume from https://files.pythonhosted.org/packages/23/40/4b3ef6f6da7bcc35ae6936cf36afab1f6fbe417b95b1e0015ede54b5365b/pyFUME-0.3.0-py3-none-any.whl.metadata
+  Downloading pyFUME-0.3.0-py3-none-any.whl.metadata (9.6 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in d:\anaconda\lib\site-packages (from pandas->FuzzyTM==1.0.0) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in d:\anaconda\lib\site-packages (from pandas->FuzzyTM==1.0.0) (2022.7)
+Requirement already satisfied: tzdata>=2022.7 in d:\anaconda\lib\site-packages (from pandas->FuzzyTM==1.0.0) (2024.1)
+Collecting simpful (from pyfume->FuzzyTM==1.0.0)
+  Obtaining dependency information for simpful from https://files.pythonhosted.org/packages/9d/0e/aebc2fb0b0f481994179b2ee2b8e6bbf0894d971594688c018375e7076ea/simpful-2.12.0-py3-none-any.whl.metadata
+  Downloading simpful-2.12.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting fst-pso (from pyfume->FuzzyTM==1.0.0)
+  Downloading fst-pso-1.8.1.tar.gz (18 kB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: six>=1.5 in d:\anaconda\lib\site-packages (from python-dateutil>=2.8.2->pandas->FuzzyTM==1.0.0) (1.16.0)
+Collecting miniful (from fst-pso->pyfume->FuzzyTM==1.0.0)
+  Downloading miniful-0.0.6.tar.gz (2.8 kB)
+  Preparing metadata (setup.py) ... done
+Downloading FuzzyTM-1.0.0-py3-none-any.whl (28 kB)
+Downloading pyFUME-0.3.0-py3-none-any.whl (59 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.5/59.5 kB 1.5 MB/s eta 0:00:00
+Downloading simpful-2.12.0-py3-none-any.whl (24 kB)
+Building wheels for collected packages: fst-pso, miniful
+  Building wheel for fst-pso (setup.py) ... done
+  Created wheel for fst-pso: filename=fst_pso-1.8.1-py3-none-any.whl size=20448 sha256=85722c60fa98bd19c513be27e40520575bca830d463873abb1d18299fcd9cce5
+  Stored in directory: c:\users\biancaa. r\appdata\local\pip\cache\wheels\69\f5\e5\18ad53fe1ed6b2af9fad05ec052e4acbac8e92441df44bad2e
+  Building wheel for miniful (setup.py) ... done
+  Created wheel for miniful: filename=miniful-0.0.6-py3-none-any.whl size=3522 sha256=ce8aec55788789f603023b0ca4c2e7b1d04085dd87284976b50e29302c6db452
+  Stored in directory: c:\users\biancaa. r\appdata\local\pip\cache\wheels\9d\ff\2f\afe4cd56f47de147407705626517d68bea0f3b74eb1fb168e6
+Successfully built fst-pso miniful
+Installing collected packages: simpful, miniful, fst-pso, pyfume, FuzzyTM
+Successfully installed FuzzyTM-1.0.0 fst-pso-1.8.1 miniful-0.0.6 pyfume-0.3.0 simpful-2.12.0
+
+D:\Anaconda\Scripts>pip install  blosc2
+Collecting blosc2
+  Obtaining dependency information for blosc2 from https://files.pythonhosted.org/packages/d1/48/7d4be4e57342ec60c05d11478257b235cf33dc96c31049fb47e6ae98b652/blosc2-2.5.1-cp311-cp311-win_amd64.whl.metadata
+  Downloading blosc2-2.5.1-cp311-cp311-win_amd64.whl.metadata (9.4 kB)
+Requirement already satisfied: numpy>=1.20.3 in d:\anaconda\lib\site-packages (from blosc2) (1.24.3)
+Collecting ndindex>=1.4 (from blosc2)
+  Obtaining dependency information for ndindex>=1.4 from https://files.pythonhosted.org/packages/4c/1f/cbec4cb91b5aa7e44a539a92ec76293ababe9a6dd123c52a0e416d50dc81/ndindex-1.8-py3-none-any.whl.metadata
+  Downloading ndindex-1.8-py3-none-any.whl.metadata (3.4 kB)
+Requirement already satisfied: msgpack in d:\anaconda\lib\site-packages (from blosc2) (1.0.3)
+Requirement already satisfied: py-cpuinfo in d:\anaconda\lib\site-packages (from blosc2) (8.0.0)
+Downloading blosc2-2.5.1-cp311-cp311-win_amd64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 5.5 MB/s eta 0:00:00
+Downloading ndindex-1.8-py3-none-any.whl (91 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 5.4 MB/s eta 0:00:00
+Installing collected packages: ndindex, blosc2
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+tables 3.8.0 requires blosc2~=2.0.0, but you have blosc2 2.5.1 which is incompatible.
+Successfully installed blosc2-2.5.1 ndindex-1.8
+
+D:\Anaconda\Scripts>pip install  blosc2==2.0.0
+Collecting blosc2==2.0.0
+  Obtaining dependency information for blosc2==2.0.0 from https://files.pythonhosted.org/packages/03/d0/685258d475e09d8884d64c8a1eb90a3428fbba782e60b7926f9fdb82c297/blosc2-2.0.0-cp311-cp311-win_amd64.whl.metadata
+  Downloading blosc2-2.0.0-cp311-cp311-win_amd64.whl.metadata (11 kB)
+Requirement already satisfied: msgpack in d:\anaconda\lib\site-packages (from blosc2==2.0.0) (1.0.3)
+Downloading blosc2-2.0.0-cp311-cp311-win_amd64.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 5.4 MB/s eta 0:00:00
+Installing collected packages: blosc2
+  Attempting uninstall: blosc2
+    Found existing installation: blosc2 2.5.1
+    Uninstalling blosc2-2.5.1:
+      Successfully uninstalled blosc2-2.5.1
+Successfully installed blosc2-2.0.0
+
+D:\Anaconda\Scripts>pip install sentencepiece
+Collecting sentencepiece
+  Obtaining dependency information for sentencepiece from https://files.pythonhosted.org/packages/a2/f6/587c62fd21fc988555b85351f50bbde43a51524caafd63bc69240ded14fd/sentencepiece-0.2.0-cp311-cp311-win_amd64.whl.metadata
+  Downloading sentencepiece-0.2.0-cp311-cp311-win_amd64.whl.metadata (8.3 kB)
+Using cached sentencepiece-0.2.0-cp311-cp311-win_amd64.whl (991 kB)
+Installing collected packages: sentencepiece
+Successfully installed sentencepiece-0.2.0
+
+D:\Anaconda\Scripts>pip install certifi==2023.7.22
+Collecting certifi==2023.7.22
+  Obtaining dependency information for certifi==2023.7.22 from https://files.pythonhosted.org/packages/4c/dd/2234eab22353ffc7d94e8d13177aaa050113286e93e7b40eae01fbf7c3d9/certifi-2023.7.22-py3-none-any.whl.metadata
+  Downloading certifi-2023.7.22-py3-none-any.whl.metadata (2.2 kB)
+Downloading certifi-2023.7.22-py3-none-any.whl (158 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 158.3/158.3 kB 4.8 MB/s eta 0:00:00
+Installing collected packages: certifi
+  Attempting uninstall: certifi
+    Found existing installation: certifi 2024.2.2
+    Uninstalling certifi-2024.2.2:
+      Successfully uninstalled certifi-2024.2.2
+Successfully installed certifi-2023.7.22
