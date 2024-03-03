@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="cluster">
+    <file>assets/cluster2.jpeg</file>
+  </qresource>
+</RCC>
