@@ -8,8 +8,16 @@ from PyQt5.QtGui import QPixmap,QIcon,QMovie
 from PyQt5.QtWidgets import QMessageBox
 import time
 import webbrowser
-import timeit
+import timeit,datetime
 import sqlite3
+import csv
+
+
+from PyQt5.QtGui import QPainter, QColor, QPen, QBrush, QRadialGradient, QPolygonF
+
+import math
+from PyQt5.QtCore import QTimer, Qt, QPointF
+from PyQt5.QtGui import QPainter, QColor, QPen, QBrush, QRadialGradient
 
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QComboBox, QPushButton, QLabel
 import subprocess
@@ -20,6 +28,8 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
 import warnings
 from requests.exceptions import ConnectionError
+
+count=1
 
 def custom_excepthook(type, value, traceback):
     # Handle exceptions and warnings here
@@ -32,6 +42,68 @@ sys.excepthook = custom_excepthook
 
 def show_warning():
     warnings.warn("This is a sample warning!")
+
+def WriteReport(loc):
+    import pathlib
+    import textwrap
+    API_KEY='AIzaSyA6zIjic5VY7a4m026zboRL_8qHTCOj0EU'
+    import google.generativeai as genai
+
+    from IPython.display import display
+    from IPython.display import Markdown
+
+
+    def to_markdown(text):
+        text = text.replace('•', '  *')
+        return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
+
+    genai.configure(api_key=API_KEY)
+
+    # for m in genai.list_models():
+    #   if 'generateContent' in m.supported_generation_methods:
+    #     print(m.name)
+
+    model = genai.GenerativeModel('gemini-pro')
+
+    response = model.generate_content("""write a similar text for sluggishness and more delay in shifting screens
+                                  issue type: random
+                                  steps to reproduce : goto """ +loc+""" L103 23.02.24 3:08pm
+    On continuous clicking of phone bazzle button , the previous screen is displayed for a split second
+
+    Issue type: sporadically
+
+    Steps to reproduce
+    1) tap on the  phone bazzle button continuously. 
+
+
+    Expected output
+    The ivi should remain on phone screen. 
+
+    Actual output
+    Ivi displayed the previous page ie the music screen for a split second
+                                  
+                                  """)
+    # Display the generated content using Markdown
+    # markdown_response = to_markdown(response.text)
+    # display(markdown_response)
+
+    if response._error:
+        print("Error occurred:", response._error)
+    else:
+        # Convert the generated content to Markdown format
+        print(response.text)
+
+        # Display the generated content using Markdown
+
+def slugginess_report(time_duration):
+    F=open(".\logs\data_slow.csv","a",newline="") #f is the file object
+    w=csv.writer(F)         # w is the writer object
+    w.writerow(["sno.","issue","timestamp","time"]) #header row #only on first time
+    ts = (datetime.datetime.now()).strftime("%Y_%m_%d_%H_%M_%S")
+    w.writerow(count,"slugginess",ts,str(time_duration))
+    F.close()
+        
+    
 
 class SplashScreen(QSplashScreen):
     def __init__(self):
@@ -76,6 +148,9 @@ class WelcomeScreen(QDialog):
         login_load=stop-start
         print(login_load)
         #0.10786724090576172
+        if(login_load>0.1):
+            slugginess_report(login_load)
+
 
     def gotosignup(self):
         start=time.time()
@@ -88,6 +163,8 @@ class WelcomeScreen(QDialog):
         stop=time.time()
         signup_load=stop-start
         print(signup_load)
+        if(signup_load>0.1):
+            slugginess_report(signup_load)
     
     def gotochoose(self):
         # msg = QMessageBox()
@@ -109,6 +186,8 @@ class WelcomeScreen(QDialog):
         stop=time.time()
         menu_load=stop-start
         print(menu_load)
+        if(menu_load>0.1):
+            slugginess_report(menu_load)
              
 class LoginScreen(QDialog):
     def __init__(self):
@@ -124,14 +203,26 @@ class LoginScreen(QDialog):
         self.login.clicked.connect(self.gotologin)
 
     def gotowelcome(self):
+        start=time.time()
         welcome=WelcomeScreen()
         widget.addWidget(welcome)
         widget.setCurrentWidget(welcome)
+        stop=time.time()
+        welcome_load=stop-start
+        print(welcome_load)
+        if(welcome_load>0.1):
+            slugginess_report(welcome_load)
     
     def gotosignup(self):
+        start=time.time()
         signup=SignupScreen()
         widget.addWidget(signup)
         widget.setCurrentWidget(signup)
+        stop=time.time()
+        signup_load=stop-start
+        print(signup_load)
+        if(signup_load>0.1):
+            slugginess_report(signup_load)
 
     def gotologin(self):
         global username
@@ -182,14 +273,26 @@ class SignupScreen(QDialog):
         self.welcome_7.clicked.connect(self.gotowelcome)
 
     def gotologin(self):
+        start=time.time()
         login=LoginScreen()
         widget.addWidget(login)
         widget.setCurrentWidget(login)
+        stop=time.time()
+        login_load=stop-start
+        print(login_load)
+        if(login_load>0.1):
+            slugginess_report(login_load)
     
     def gotowelcome(self):
+        start=time.time()
         welcome=WelcomeScreen()
         widget.addWidget(welcome)
         widget.setCurrentWidget(welcome)
+        stop=time.time()
+        welcome_load=stop-start
+        print(welcome_load)
+        if(welcome_load>0.1):
+            slugginess_report(welcome_load)
     
     def signup(self):
         global name,email,phone
@@ -265,16 +368,29 @@ class MenuScreen(QDialog):
         self.music.clicked.connect(self.gotomusic)
         self.wifi.clicked.connect(self.gotowifi)
         self.gps.clicked.connect(self.gotomaps)
+        self.cluster.clicked.connect(self.gotocluster)
 
     def gotogoogle(self):
+        start=time.time()
         google=GoogleScreen()
         widget.addWidget(google)
         widget.setCurrentWidget(google)
+        stop=time.time()
+        google_load=stop-start
+        print(google_load)
+        if(google_load>0.1):
+            slugginess_report(google_load)
     
     def gotomusic(self):
+        start=time.time()
         music=MusicScreen()
         widget.addWidget(music)
         widget.setCurrentWidget(music)
+        stop=time.time()
+        music_load=stop-start
+        print(music_load)
+        if(music_load>0.1):
+            slugginess_report(music_load)
     
     def gotowifi(self):
         wifi_dialog = QDialog()  # Create a new dialog
@@ -283,6 +399,25 @@ class MenuScreen(QDialog):
         layout.addWidget(wifi_widget)
         wifi_dialog.setLayout(layout)
         wifi_dialog.exec_()
+
+    def gotocluster(self):
+        # cluster=QDialog()
+        # cluster=ClusterScreen()
+        # layout=QVBoxLayout()
+        # layout.addWidget(cluster)
+        # cluster.setLayout(layout)
+        # cluster.exec_()
+        start=time.time()
+        cluster=ClusterScreen()
+        widget.addWidget(cluster)
+        widget.setCurrentWidget(cluster)
+        cluster.exec_()
+        stop=time.time()
+        cluster_load=stop-start
+        print(cluster_load)
+        # if(cluster_load>0.1):
+        #     slugginess_report(cluster_load)
+
 
     def gotomaps(self):
         # then make a url variable 
@@ -373,9 +508,76 @@ class GoogleScreen(QDialog):
         webbrowser.open(url)   
     
     def gotomenu(self):
+        start=time.time()
         menu=MenuScreen()
         widget.addWidget(menu)
         widget.setCurrentWidget(menu)
+        stop=time.time()
+        menu_load=stop-start
+        print(menu_load)
+        if(menu_load>0.1):
+            slugginess_report(menu_load)
+
+
+    # def __init__(self):
+    #     super(QDialog,self).__init__()
+    #     loadUi("cluster.ui",self)
+      
+from PyQt5.QtWidgets import QWidget
+from PyQt5.QtCore import QTimer, Qt, QPointF
+from PyQt5.QtGui import QPainter, QBrush, QRadialGradient, QPixmap
+
+
+class ClusterScreen(QDialog):
+    def __init__(self):
+        super(ClusterScreen, self).__init__()
+        loadUi("cluster.ui",self)
+        self.setWindowTitle("Cluster Screen")
+        self.setGeometry(200, 200, 400, 400)
+        
+        layout = QVBoxLayout(self)
+        self.img_label = QLabel()
+        layout.addWidget(self.img_label)
+        
+        qpixmap = QPixmap('assets//cluster2.jpeg')  # Assuming the image file is located in the assets folder
+        self.img_label.setPixmap(qpixmap)
+            
+        self.angle = 0
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.updateAnimation)
+        self.timer.start(30)  # Update every 30 milliseconds (33 fps)
+
+    def paintEvent(self, event):
+        painter = QPainter(self.img_label.pixmap())  # Get the pixmap of the QLabel
+        painter.setRenderHint(QPainter.Antialiasing)
+    
+        # Draw needle
+        painter.save()
+        painter.translate(385, 355)  # Adjust positioning as needed
+        painter.rotate(self.angle)
+        gradient = QRadialGradient(0, 0, 35)
+        gradient.setColorAt(0, Qt.green)
+        gradient.setColorAt(1, Qt.darkGreen)
+        painter.setBrush(QBrush(gradient))
+        painter.setPen(Qt.NoPen)
+    
+        # Define needle shape
+        needle = QPolygonF([
+            QPointF(-3, 0),
+            QPointF(3, 0),
+            QPointF(0, -30)
+        ])
+        painter.drawConvexPolygon(needle)
+    
+        painter.restore()
+    
+    def updateAnimation(self):
+        self.angle += 1  # Adjust the speed of rotation here
+        if self.angle >= 360:
+            self.angle = 0
+        self.update()
+
+
 
 class WiFiNetworksWidget(QWidget):
     def __init__(self):
