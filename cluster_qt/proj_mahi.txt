@@ -1,0 +1,48 @@
+Aim: To eliminate the manual labour associated with testing application and using ai for the same.
+Todo:
+1. Slugginess for various actions. (separate : done)
+----> Find a method to document the steps to reach there
+----> last three or smth
+
+Time taken for each action in the best case
+
+2.Continuous screen recording , Note start ,end time of the issue and trim off the video and add to the logs/// <done!>
+3.Most of the time: More time- possibility of issue.
+
+1 st order checking
+2 nd order checking
+....
+nth order checking.
+
+In case of nth order: add the respone time.
+
+Use the various previously seen issues as a dataset for finding new issues.
+As a image dataset ,where xml bounding boxes on the new issues and timestamp is taken for each and everything corresponding to the same.
+
+1.Glitchy screens:(DONE)
+	lines
+	flowers
+	patterns
+
+2.Half screens(DONE)
+
+In automatic testing:
+No need to click each screen by used - continuous record
+<Try with pictures as well!>
+
+3.bool for button clicked = If anything clicjed set everything else false ---->variable for all the buttons
+If not highlighted in image check---> highlighed /not highlighted for all the icons
+
+4. In nth order testing keep note of all buttons pressed
+If some other screen identified in stipulated time range(when there is no lag)
+.Check if all needed screens are present
+.Check if any unwanted screen is present
+
+=> Automatic drifting to other screens can be handled with this.
+
+6. Black screens, delay in black screens.(DONE)
+7. Try reading the controllers and variation even if no change in them //for music sliders
+
+----> Lag in shifting of sliders
+----> wrong position
+----> How to play songs with offset
