@@ -5,3 +5,9 @@ But before implementing and deploying such softwares usually on android, they ha
 
 overall the (now) smart core connected clusters and info tainment system solutions help automakers provide a more natural and intuitive HMI system that ensures safety, comfort, and convenience for drivers.
 To reduce the time and effort involved in documenting one time issues and for easy and automated report generation this project was developed.
+
+For setting up in Edge device:
+
+$ wget https://raw.githubusercontent.com/jasondeglint/tf/main/install_tensorflow.sh
+
+$ source install_tensorflow.sh
